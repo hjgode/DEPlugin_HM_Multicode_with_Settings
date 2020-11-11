@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">H&amp;M Scanning Plugin</string>
+    <string name="notify_scan_mode_normal">Normal scan mode</string>
+    <string name="notify_scan_mode_continuous">Continuous scan mode</string>
+    <string name="title_activity_edit_settings">EditSettingsActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

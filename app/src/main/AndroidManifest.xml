@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.honeywell.sample.dataeditingplugin">
+
+    <uses-permission android:name="com.honeywell.decode.permission.DECODE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        <receiver android:name=".DataEditingPlugin">
+            <intent-filter>
+                <action android:name="com.honeywell.decode.intent.action.ACTIVATE_DATA_EDIT_PLUGIN" />
+                <action android:name="com.honeywell.decode.intent.action.EDIT_DATA" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MainActivity"
+            android:background="@android:color/transparent"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EditSettingsActivity"
+            android:label="@string/title_activity_edit_settings"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SettingsActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                //TODO check this in GUI:
+                <action android:name="com.honeywell.decode.intent.action.EDIT_SETTINGS" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
